@@ -1,0 +1,78 @@
+<html>
+    <style>
+        select{
+            height: 30px;
+            width: 150px;
+            color: darkblue;
+            text-align: center;
+            background-color: pink;
+            font-size: 20px;
+        }
+        h1{
+            font-size: 150px;
+            color:pink;
+            background-color:cornflowerblue;
+            font-family: Arial;
+            text-align: center;
+        }
+       
+
+
+    
+    </style>
+    <script>
+    function changeImage() {
+      var dropdown = document.getElementById("imageDropdown");
+      var selectedOption = dropdown.options[dropdown.selectedIndex].value;
+      var imageElement = document.getElementById("displayedImage");
+    
+      var imageSources = {
+        "option1": "img//kitty1.jpg",
+        "option2": "img//kitty2.jpg",
+        "option3": "img//kitty3.jpg"
+      };
+      imageElement.src = imageSources[selectedOption];
+    }
+
+        </script>
+
+    <body>
+        <header>
+            <h1>HELLOKITTY</h1>
+            <div style="background-color:blueviolet; >
+            <label for="imageDropdown">
+                <select id="imageDropdown" onchange="changeImage()">
+                    <option value="option1">kitty 1</option>
+                    <option value="option2">kitty 2</option>
+                    <option value="option3">kitty 3</option>
+                </select>
+            </label>
+                <label>
+                    <select onchange="alert('kitty')">
+                        <option>meoh</option>
+                        <option>kitty</option>
+                    </select>
+                </label>
+            </div>
+        </header>
+    
+    
+        <body>
+            <br>
+            <br>
+            <p style="font-size: xx-large; text-align: center;">This is a practice web page useing 
+                java css and html to showing <br>hello kitty pictures.....enjoy! </p>
+                <br>
+                <br>
+            <div style="text-align: center;">
+                <img id="displayedImage" src="" alt="" center="align-items: center;">
+            </div>
+        </body>
+
+    <div>
+        <footer>
+         
+        </footer>
+    </div>
+    </body>
+</html>
